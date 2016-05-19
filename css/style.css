@@ -215,8 +215,8 @@ p {
 
 .button {
 	white-space: pre;
-	margin-left: 6px;
-	margin-right: 6px;
+	margin-left: 0px;
+	margin-right: 0px;
 	margin-top: 1px;
 	margin-bottom: 1px;
     display: inline-block;
@@ -469,8 +469,7 @@ tr.plain:nth-child(even) {
 	background: transparent;
 }
 tr.plain:hover {
-	background: #6f94c3;
-	border-radius: 10px;
+	
 }
 
 table.plain_no_hover {
@@ -490,4 +489,30 @@ td.plain_no_hover {
 	margin-bottom: 0px;
 	margin: 0px;
 	padding: 0px;
+}
+
+/* this part adapted from http://www.w3schools.com/howto/howto_css_dropdown.asp */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #819bcb;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+/* everything else is from button class above */
+.dropdown-content a {
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }

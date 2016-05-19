@@ -206,6 +206,7 @@ td.bold {
 }
 
 p {
+	text-justify: auto;
 	padding: 10px;
 	max-width: 500px;
 	border-radius: 13px;

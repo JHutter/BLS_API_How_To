@@ -7,9 +7,9 @@ body, #section {
 }
 
 #header {
-	/*border-radius: 10px;*/
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	/*border-radius: 0px;*/
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
     color:white;
     text-align:center;
     padding:5px;
@@ -28,9 +28,9 @@ body, #section {
     );
 }
 #nav {
-	/*border-radius: 10px;*/
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	/*border-radius: 0px;*/
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
     /*background-color:#eeeeee;*/
 	min-height: 40px;
     padding:2px; 
@@ -50,10 +50,10 @@ body, #section {
 #section {
     
     padding:10px; 
-	border-radius: 10px;
+	border-radius: 0px;
 }
 #footer {
-	border-radius: 10px;
+	border-radius: 0px;
     color:white;
     clear:both;
     text-align:center;
@@ -71,53 +71,9 @@ body, #section {
         color-stop(1, #09092a)
     );
 }
-#login {
-	float: center;
-    padding:45px; 
-	padding-top:25px; 
-	padding-bottom: 50px;
-	background-color: slategray;
-	border-radius: 150px;
-	width: 300px;
-	height: 70px;
-	border: 1px solid #2d6898;
-	background-image: radial-gradient(ellipse, #b3ccff 0%, #6f94c3 100%);
-    background-image: -o-radial-gradient(ellipse, #b3ccff 0%, #6f94c3 100%);
-    background-image: -moz-radial-gradient(ellipse, #b3ccff 0%, #6f94c3 100%);
-    background-image: -webkit-radial-gradient(ellipse, #b3ccff 0%, #6f94c3 100%);
-    background-image: -ms-radial-gradient(ellipse, #b3ccff 0%, #6f94c3 100%);
- 
-    background-image: -webkit-gradient(
-        radial,
-        color-stop(0, #b3ccff),
-        color-stop(1, #6f94c3)
-    );
-}
 
-#widget {
-	border-radius: 10px;
-	background-color: midnightblue;
-	color: white;
-	padding: 20px;
-	float: left;
- 
-    
-    border: 1px solid #2d6898;
-    background-image: radial-gradient(ellipse, midnightblue 0%, #09092a 100%);
-    background-image: -o-radial-gradient(ellipse, midnightblue 0%, #09092a 100%);
-    background-image: -moz-radial-gradient(ellipse, midnightblue 0%, #09092a 100%);
-    background-image: -webkit-radial-gradient(ellipse, midnightblue 0%, #09092a 100%);
-    background-image: -ms-radial-gradient(ellipse, midnightblue 0%, #09092a 100%);
- 
-    background-image: -webkit-gradient(
-        radial,
-        color-stop(0, midnightblue),
-        color-stop(1, #09092a)
-    );
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
+
+
 
 h1 {
 	padding: 20px;
@@ -128,7 +84,7 @@ h2 {
 }
 h3 {
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 0px;
     /*background-color:#eeeeee;
 	text-align: center;
 	width: 600px;
@@ -136,7 +92,7 @@ h3 {
 	**** haven't decided about these yet */
 }
 table {
-	border-radius: 13px;
+	border-radius: 0px;
 	background: #f1f2f4;
 	border-collapse: collapse;	
 }
@@ -150,17 +106,17 @@ th {
 	padding: 4px;
 }  
 th:first-child {
-	border-top-left-radius: 13px;
+	border-top-left-radius: 0px;
 	
 }
 th:last-child {
-	border-top-right-radius: 13px;
+	border-top-right-radius: 0px;
 	
 }
 
 tr {
 	font-size: 16px;
-	border-radius: 10px;
+	border-radius: 0px;
 	padding: 5px;
 	margin-bottom: 5px;
 }
@@ -173,7 +129,7 @@ tr:nth-child(odd) {
 }
 
 tr:last-child {
-	border-radius: 20px;
+	border-radius: 0px;
 }
 
 td {
@@ -206,10 +162,10 @@ td.bold {
 }
 
 p {
-	text-justify: auto;
+	text-align: justify;
 	padding: 10px;
 	max-width: 500px;
-	border-radius: 13px;
+	border-radius: 0px;
 }
 
 
@@ -241,9 +197,9 @@ p {
         color-stop(0, rgb(73,132,180)),
         color-stop(1, rgb(97,155,203))
     );
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
     /*text-shadow: 0px -1px 0px rgba(0,0,0,.5);
     -webkit-box-shadow: 0px 3px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
     -moz-box-shadow: 0px 3px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
@@ -438,9 +394,9 @@ select {
         color-stop(0, rgb(73,132,180)),
         color-stop(1, rgb(97,155,203))
     );
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
     /*text-shadow: 0px -1px 0px rgba(0,0,0,.5);
     -webkit-box-shadow: 0px 3px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
     -moz-box-shadow: 0px 3px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);

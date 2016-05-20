@@ -34,7 +34,7 @@ body, #section {
     /*background-color:#eeeeee;*/
 	min-height: 40px;
     padding:2px; 
-	border: 1px solid #5d86bb;
+	border: 1px solid #75a3a3;
     background-image: radial-gradient(ellipse, #b3cccc 0%, #527a7a 100%);
     background-image: -o-radial-gradient(ellipse, #b3cccc 0%, #527a7a 100%);
     background-image: -moz-radial-gradient(ellipse, #b3cccc 0%, #527a7a 100%);

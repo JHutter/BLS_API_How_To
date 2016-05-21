@@ -30,12 +30,62 @@
 		
 		<img src="../resources/img/registration-entry.jpg" alt="Simple registration form" width="50%" height="50%">
 		
-		<h3>Setting up GET and POST requests</h3>
+		<h3>Sending Requests and Receiving Data in Responses</h3>
 		
 		<p>The BLS API accepts RESTful signatures with either GET or POST HTTP type. 
-		The base URL that you will use is http://api.bls.gov/publicAPI/v2/timeseries/data/ . See the code example</p>
+		The base URL that you will use is http://api.bls.gov/publicAPI/v2/timeseries/data/ . See the code example 
+		for a very simple GET request below:</p>
 		
-		<code></code>
+		<div class="code-sample">
+		<pre>
+		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/';
+		var seriesID = 'LAUCN040010000000005';
+		var signature = baseURL + seriesID;
+		var req = new XMLHttpRequest();
+		req.open("GET", signature, false);
+		req.send(null);
+		console.log(JSON.parse(req.responseText));
+		</pre>
+		</div>
+		
+		<p>The BLS API sends responses in one of two forms. One is XLSX, which 
+		we won't cover in much detail here, but can be downloaded in the client 
+		browser. The other format, which we will deal with primarily, is JSON format. 
+		<a href="http://www.json.org/" target="_blank">JSON</a>, or JavaScript Object Notation, is a standardized object format for 
+		transferring data. Notably, it consists of attribute-value pairs in which the attribute 
+		consists of a string. Below is an example of a JSON object returned by the BLS API:</p>
+		
+		<div class="code-sample">
+		<pre>
+		{"status":"REQUEST_SUCCEEDED",
+		"responseTime":34,
+		"message":[],
+		"Results":{
+			"series": [
+				{"seriesID":"LAUCN040010000000005",
+				"data":[
+					{"year":"2015",
+					"period":"M12",
+					"periodName":"December",
+					"value":"17654",
+					"footnotes":[{	"code":"R",
+									"text":"Data were subject to revision on April 15, 2016."}]},
+					
+					{"year":"2015",
+					"period":"M11",
+					"periodName":"November",
+					"value":"17765",
+					"footnotes":[{	"code":"R",
+									"text":"Data were subject to revision on April 15, 2016."}]}
+				]}
+			]
+		}}
+		</pre>
+		</div>
+		
+		<p>Developers can then parse this data in order to extract useful parts, 
+		for example, so generate a graph of values over a range of time. BLS API JSON objects 
+		have predictable parts, which we'll jump more into interpreting when we get to responses.</p>
 	</div>
 
 

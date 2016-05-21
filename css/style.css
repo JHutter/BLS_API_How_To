@@ -150,21 +150,6 @@ a.button:hover {
 }
 a.button:active {}
 
-input.button:link {}
-input.button:visited {}
-input.button:hover {
-	 border-top-color: #75a3a3;border-right-color: #75a3a3;border-bottom-color: #75a3a3;border-left-color: #75a3a3;border-width: 1px;border-style: solid;
-	 background-color: #94b8b8; background-image: -webkit-gradient(linear, left top, left bottom, from(#94b8b8), to(#476b6b));
-	 background-image: -webkit-linear-gradient(top, #94b8b8, #476b6b);
-	 background-image: -moz-linear-gradient(top, #94b8b8, #476b6b);
-	 background-image: -ms-linear-gradient(top, #94b8b8, #476b6b);
-	 background-image: -o-linear-gradient(top, #94b8b8, #476b6b);
-	 background-image: linear-gradient(to bottom, #94b8b8, #476b6b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#94b8b8, endColorstr=#476b6b);
-}
-input.button:active {}
-
-
-
 .plain {
 	background: transparent;
 	margin-bottom: 0px;
@@ -225,4 +210,10 @@ td.plain_no_hover {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.code-sample {
+	background-color: #d1e0e0;
+	border: solid #669999 1px;
+	
 }

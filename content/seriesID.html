@@ -43,7 +43,30 @@
 		Spending and Time Use, we have the options American Time Use Survey and 
 		Consumer Expenditure Survey. Choosing American Time Use Survey, BLS gives 
 		an overview about this survey, and the format for seriesIDs inquiring about 
-		it.</p>
+		it. See the example below:</p>
+		
+		<div class="code-sample">
+		<pre>
+		Series ID    TUU10101AA01011987
+		Positions       Value           Field Name
+		1-2             TU              Prefix
+		3               U               Seasonal Adjustment Code 
+		4-8             10101           Type of Estimate Code
+		9               A               Time Period Code
+		10              A               All ATUS data series have the character "A."
+        11-12           01	        Number of years Code
+		13-18           011987          Character Code
+		</pre>
+		</div>
+		
+		<p>We can see from this example, that the seriesID is 10 digits. The prefix to mark 
+		the American Time Use Survey is TU. The following sections control factors such as the 
+		seasonal adjustment code (U for unadjusted, S for seasonally adjusted), the type of 
+		estimate, the time period (for example, A for annual), the number of years, and 
+		an additional character code that filters the information by characteristics such 
+		as age, labor force status, etc. While most of the information you will need is 
+		there, it will require digging to find, along with some experimenting to fill in gaps 
+		in the information, such as with the 6-character code.</p>
 				
 				
 	</div>

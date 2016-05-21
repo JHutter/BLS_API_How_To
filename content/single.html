@@ -21,7 +21,21 @@
 		GET request, which may have just the series ID or may have parameters, 
 		as discussed in Parameters. Use the single series option to get information 
 		from one program with one set of specifications. The results will contain one 
-		series object, which may have multiple data objects (see Responses page).</p>
+		series object, which may have multiple data objects (see Responses page). See the 
+		code example below, which uses the seriesID we generated earlier to retrieve 
+		information about annual wages of photographers, nationally:</p>
+		
+		<div class="code-sample">
+		<pre>
+		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/';
+		var seriesID = 'OEUN000000054192027402104';
+		var signature = baseURL + seriesID;
+		var req = new XMLHttpRequest();
+		req.open("GET", signature, false);
+		req.send(null);
+		console.log(JSON.parse(req.responseText));
+		</pre>
+		</div>
 	</div>
 
 

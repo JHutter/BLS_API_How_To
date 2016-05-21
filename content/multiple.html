@@ -23,7 +23,22 @@
 		
 		<h3>Sending A Payload</h3>
 		
-		<p>text here, include some code</p>
+		<p>When sending a signature with multiple series IDs, you should set 
+		the header to Content-Type=application/x-www-form-urlencoded. In the 
+		payload, the seriesID attribute will have the seriesIDs separated by 
+		commas. See the code example below:</p>
+		
+		<div class="code-sample">
+		<pre>
+		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/';
+		var seriesIDs = ['OEUN000000054192027402104', 'OEUS410000054192027402104'];
+		var signature = baseURL + seriesID;
+		var req = new XMLHttpRequest();
+		req.open("POST", signature, false);
+		req.send(null);
+		console.log(JSON.parse(req.responseText));
+		</pre>
+		</div>
 		
 		<h3>Sending a JSON Object</h3>
 		

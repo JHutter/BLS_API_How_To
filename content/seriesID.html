@@ -27,7 +27,7 @@
 		whose format pattern is then explained (be prepared to wade through the 
 		series ID <a href="http://www.bls.gov/help/hlpforma.htm" target="_blank">format page</a> to find the information you are looking for!).</p>
 		
-		<ul><strong>Series ID format categories (subcategories are not comprehensive)</strong>
+		<ul><strong>Series ID format categories</strong>
 			<li>Employment and Unemployment</li>
 			<li>Inflation and Prices</li>
 			<li>Spending and Time Use</li>
@@ -47,15 +47,15 @@
 		
 		<div class="code-sample">
 		<pre>
-		Series ID    TUU10101AA01011987
-		Positions       Value           Field Name
-		1-2             TU              Prefix
-		3               U               Seasonal Adjustment Code 
-		4-8             10101           Type of Estimate Code
-		9               A               Time Period Code
-		10              A               All ATUS data series have the character "A."
-        11-12           01	        Number of years Code
-		13-18           011987          Character Code
+		Series ID		TUU10101AA01011987
+		Positions		Value 		Field Name
+		1-2			TU			Prefix
+		3			U 			Seasonal Adjustment Code 
+		4-8			10101		Type of Estimate Code
+		9 			A			Time Period Code
+		10			A			All ATUS data series have the character "A."
+		11-12		01			Number of years Code
+		13-18		011987		Character Code
 		</pre>
 		</div>
 		
@@ -67,6 +67,11 @@
 		as age, labor force status, etc. While most of the information you will need is 
 		there, it will require digging to find, along with some experimenting to fill in gaps 
 		in the information, such as with the 6-character code.</p>
+		
+		<p>Each of the programs included in the BLS API has a seriesID prefix 
+		and digit positions with relevant codes. It's worth it to dig through the 
+		seriesID format because the seriesID is the most important part of requesting data through the 
+		BLS API.</p>
 				
 				
 	</div>

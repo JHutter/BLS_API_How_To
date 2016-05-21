@@ -31,14 +31,26 @@
 		<div class="code-sample">
 		<pre>
 		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/';
-		var seriesIDs = ['OEUN000000054192027402104', 'OEUS410000054192027402104'];
-		var signature = baseURL + seriesID;
+		var seriesIDs = ['OEUN000000054192027402104', 'OEUN000000054192027402103'];
+		var signature = "seriesid=";
+		for (var i = 0; i = seriesIDs.length; i++) {
+			signature += seriesIDs[i] + ',';
+		}
+		signature = signature.substring(0,signature.length-1);
+		
 		var req = new XMLHttpRequest();
-		req.open("POST", signature, false);
-		req.send(null);
+		req.open("POST", baseURL, false);
+		req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		req.send(signature);
 		console.log(JSON.parse(req.responseText));
 		</pre>
 		</div>
+		
+		<p>In this example, we are requesting the annual wage and hourly wage 
+		data for photographers nationally, both from the same program. Notice that we specified 
+		request as POST and set the content type. In the http request that we opened, we specified 
+		the base URL but did not add the signature on in this place; instead, we used req.send(signature) 
+		to send it because it's a POST request not a GET request.
 		
 		<h3>Sending a JSON Object</h3>
 		

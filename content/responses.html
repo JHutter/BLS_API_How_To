@@ -36,10 +36,20 @@
 					"period":"A01",
 					"periodName":"Annual",
 					"value":"35860",
-					"footnotes":[{}]}]}]
-		}}
+					"footnotes":[{}]}]
+				}]
+			}
+		}
 		</pre>
 		</div>
+		
+		<p>The first few fields in the response are data about the request itself: status of the 
+		request, the time that it took to process the request, any applicable messages about the request. In the above 
+		response, we can see that there was no data for the series we requested for the years 2013 or 2014. However, data for 
+		2015 was available, and we are provided it in the results field. Since this is a single series request, the series array has 
+		only a single object. In a request with multiple series IDs, the array would have an object for each of the submitted series IDs, 
+		up to 50 if using a registration key. Inside the series object, we have information about the year, period, the name of the period, 
+		and any applicable footnotes.</p>
 		
 		<h3>Spreadsheet Responses</h3>
 		

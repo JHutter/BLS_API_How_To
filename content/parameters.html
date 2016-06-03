@@ -17,7 +17,42 @@
 	<div id="section">
 		<H3>Using Parameters</H3>
 
-		<p>Parameters</p>
+		<p>Parameters in the BLS API include the JSON fields we just discussed on the 
+		multiple series page (calculations, annual average, and catalog information). 
+		To use these parameters, you must send a POST request, include a registration 
+		key (as the parameters are the version 2.0 expansions), and include the 
+		parameters in the signature or the JSON object when you open the request. 
+		A request with 
+		parameters can include one or multiple series IDs, but again, must be 
+		sent as POST even with only one series ID. Below is an example of 
+		the response you will get if you attempt to send a request with parameters 
+		as a get request:</p>
+		
+		<img src="../resources/img/get-failure.png" alt="GET failure">
+		
+		<p>Below is some example code, adapting the multiple series example from the 
+		previous page to use parameters:</p>
+		
+		<div class="code-sample">
+		<pre>
+		var myRequest = '{"seriesid":["OEUN000000054192027402104", "OEUN000000054192027402103"], ' +
+						' "startyear":"2000", ' +
+						' "endyear":"2010", ' +
+						' "catalog":true, ' +
+						' "calculations":false, ' +
+						' "annualaverage":false, ' +
+						' "registrationKey":"f6be152aed67442d986955e52e5419d0" }';
+		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/' +
+					  '?registrationKey=000f4e000f204473bb565256e8eee73e&' +
+					  'catalog=true&startYear=2010&endYear=2014';
+		
+		var req = new XMLHttpRequest();
+		req.open("POST", baseURL, false);
+		req.setRequestHeader('Content-Type', 'application/json');
+		req.send(myRequest);
+		var results = JSON.parse(req.responseText);
+		</pre>
+		</div>
 	</div>
 
 

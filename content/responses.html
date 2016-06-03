@@ -21,6 +21,26 @@
 		
 		<h3>JSON Responses</h3>
 		
+		<p>JSON responses will have the following form:</p>
+		
+		<div class="code-sample">
+		<pre>
+		{"status":"REQUEST_SUCCEEDED",
+		"responseTime":32,
+		"message":["No Data Available for Series OEUN000000054192027402104 Year: 2013","No Data Available for Series OEUN000000054192027402104 Year: 2014"],
+		"Results":{
+			"series":
+				[{"seriesID":"OEUN000000054192027402104",
+				"data":
+					[{"year":"2015",
+					"period":"A01",
+					"periodName":"Annual",
+					"value":"35860",
+					"footnotes":[{}]}]}]
+		}}
+		</pre>
+		</div>
+		
 		<h3>Spreadsheet Responses</h3>
 		
 		<p>When you send a request for an xlsx file, you will receive the spreadsheet 

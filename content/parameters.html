@@ -31,20 +31,18 @@
 		<img src="../resources/img/get-failure.png" alt="GET failure">
 		
 		<p>Below is some example code, adapting the multiple series example from the 
-		previous page to use parameters:</p>
+		previous page to use parameters with a single series:</p>
 		
 		<div class="code-sample">
 		<pre>
-		var myRequest = '{"seriesid":["OEUN000000054192027402104", "OEUN000000054192027402103"], ' +
+		var myRequest = '{"seriesid":["OEUN000000054192027402104"], ' +
 						' "startyear":"2000", ' +
 						' "endyear":"2010", ' +
 						' "catalog":true, ' +
 						' "calculations":false, ' +
 						' "annualaverage":false, ' +
 						' "registrationKey":"f6be152aed67442d986955e52e5419d0" }';
-		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/' +
-					  '?registrationKey=000f4e000f204473bb565256e8eee73e&' +
-					  'catalog=true&startYear=2010&endYear=2014';
+		var baseURL = 'http://api.bls.gov/publicAPI/v2/timeseries/data/';
 		
 		var req = new XMLHttpRequest();
 		req.open("POST", baseURL, false);
